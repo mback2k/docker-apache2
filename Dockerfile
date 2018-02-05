@@ -15,4 +15,4 @@ ENV DOCKER_WEBSITES_DIR /run/docker-websites.d
 
 ADD docker-entrypoint.d/ /run/docker-entrypoint.d/
 
-CMD ["/usr/local/sbin/apache2"]
+CMD ["/usr/local/sbin/apache2d"]
