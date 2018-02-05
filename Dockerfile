@@ -4,8 +4,7 @@ MAINTAINER Marc Hoersken "info@marc-hoersken.de"
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        apache2 \
-        supervisor && \
+        apache2 && \
     apt-get clean
 
 EXPOSE 80 443
@@ -16,6 +15,4 @@ ENV DOCKER_WEBSITES_DIR /run/docker-websites.d
 
 ADD docker-entrypoint.d/ /run/docker-entrypoint.d/
 
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
-CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/usr/local/sbin/apache2"]
