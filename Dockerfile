@@ -1,7 +1,5 @@
 FROM mback2k/ubuntu:xenial
 
-MAINTAINER Marc Hoersken "info@marc-hoersken.de"
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         apache2 && \
