@@ -7,6 +7,8 @@ RUN apt-get update && \
 
 EXPOSE 80 443
 
+RUN a2dissite 000-default.conf
+
 ENV APACHE_ARGUMENTS -DFOREGROUND
 
 ENV DOCKER_WEBSITES_DIR /run/docker-websites.d
