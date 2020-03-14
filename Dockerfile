@@ -1,4 +1,4 @@
-FROM mback2k/ubuntu:xenial
+FROM mback2k/ubuntu:bionic
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
