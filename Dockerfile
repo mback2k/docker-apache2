@@ -17,4 +17,4 @@ ADD docker-entrypoint.d/ /run/docker-entrypoint.d/
 
 CMD ["/usr/local/sbin/apache2"]
 
-HEALTHCHECK CMD curl -f http://localhost/ || killall -0 run-parts || exit 1
+HEALTHCHECK CMD killall -0 run-parts || curl -f http://localhost/ || exit 1
